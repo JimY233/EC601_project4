@@ -28,5 +28,5 @@ if __name__ == '__main__':
     keyword = input("Please enter the keyword:\n")
     num = int(input("Please enter how many tweets you want to analyze:\n"))
 
-    twitter_search(keyword,num)
+    search(keyword,num)
     
