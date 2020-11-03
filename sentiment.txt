@@ -1,0 +1,1 @@
+keyword:COVID-19, score:-0.4000000059604645, magnitude:25.5
