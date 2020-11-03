@@ -1,6 +1,6 @@
 import pytest
 import unittest
-from TwitterAPI2 import twitter_search2
+from TwitterAPI import twitter_search
 
 class MyTestCase(unittest.TestCase):
     def test_num_successful(self):
