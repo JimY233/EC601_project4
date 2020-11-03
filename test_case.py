@@ -1,6 +1,6 @@
 import pytest
 import unittest
-from TwitterAPI import twitter_search
+from search import search
 
 class MyTestCase(unittest.TestCase):
     def test_num_successful(self):
@@ -14,12 +14,12 @@ class MyTestCase(unittest.TestCase):
         num = 1
 
         #res = twitter_search(keyword,num,consumer_key,consumer_secret,access_key,acess_secret):
-        res = twitter_search(keyword,num)
+        res = search(keyword,num)
                              
-        txt = []
-        for tweet in res:
-            txt.append(tweet.text)
-        print(txt)
+        #txt = []
+        #for tweet in res:
+        #    txt.append(tweet.text)
+        #print(txt)
 
 
         self.assertEqual(1, len(res))
