@@ -14,7 +14,12 @@ def test_num_successful():
     res = search(keyword,num)
     assert len(res) == 1
 
-
+def test_type_successful():
+        keyword = 'COVID-19'
+        num = 1
+        res = twitter_search(keyword,num)
+        assert type(res) is str
+        
 if __name__ == '__main__':
     pytest.main()
 
