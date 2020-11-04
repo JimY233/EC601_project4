@@ -21,7 +21,7 @@ class MyTestCase():
         #    txt.append(tweet.text)
         #print(txt)
 
-        assert len(txt) == 1
+        assert len(res) == 1
 
 
 if __name__ == '__main__':
