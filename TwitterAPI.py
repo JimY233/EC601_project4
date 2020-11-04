@@ -1,32 +1,37 @@
 import tweepy
 import sys
 import os
-
-non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
-
-#Twitter API credentials
-consumer_key = os.getenv('CONSUMER_KEY')
-consumer_secret = os.getenv('CONSUMER_SECRET')
-access_key = os.getenv('ACCESS_KEY')
-access_secret = os.getenv('ACCESS_SECRET')
-     
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_key, access_secret)
-
-api = tweepy.API(auth)
     
 def twitter_search(keyword,num):
-    text = ""
+     non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
+     #Twitter API credentials
+     consumer_key = os.getenv('CONSUMER_KEY')
+     consumer_secret = os.getenv('CONSUMER_SECRET')
+     access_key = os.getenv('ACCESS_KEY')
+     access_secret = os.getenv('ACCESS_SECRET')
+     
+     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+     auth.set_access_token(access_key, access_secret)
+     api = tweepy.API(auth)
+     
+     text = ""
     
-    for tweet in tweepy.Cursor(api.search,q=keyword).items(num):
-        text += tweet.text.translate(non_bmp_map)
+     for tweet in tweepy.Cursor(api.search,q=keyword).items(num):
+          text += tweet.text.translate(non_bmp_map)
+     
+     return text
 
-    return text
-
-def twitter_search(userid,num):
-    timeline = self.api.user_timeline(id=userid,count=num)
-
-    return timeline
+def twitter_timeline(userid,num):
+     consumer_key = os.getenv('CONSUMER_KEY')
+     consumer_secret = os.getenv('CONSUMER_SECRET')
+     access_key = os.getenv('ACCESS_KEY')
+     access_secret = os.getenv('ACCESS_SECRET')   
+     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+     auth.set_access_token(access_key, access_secret)
+     api = tweepy.API(auth)
+     
+     timeline = self.api.user_timeline(id=userid,count=num)
+     return timeline
 
 if __name__ == '__main__':
     
