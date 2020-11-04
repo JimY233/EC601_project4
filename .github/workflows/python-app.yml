@@ -21,7 +21,7 @@ jobs:
         PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID_A}}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy python-app.yaml
+        args: info
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
