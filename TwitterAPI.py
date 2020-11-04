@@ -16,12 +16,10 @@ def twitter_search(keyword,num):
 
     api = tweepy.API(auth)
 
-    text = []
-    #text = ""
+    text = ""
 
     for tweet in tweepy.Cursor(api.search,q=keyword).items(num):
-        text.append(tweet.text.translate(non_bmp_map))
-        #text += tweet.text.translate(non_bmp_map)
+        text += tweet.text.translate(non_bmp_map)
 
     #print(text)
     return text
