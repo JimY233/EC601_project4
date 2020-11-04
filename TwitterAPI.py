@@ -47,5 +47,5 @@ if __name__ == '__main__':
     num = int(input("Please enter how many tweets you want to analyze:\n"))
 
     twitter_search(keyword,num)
-    twiiter_timeline(userid,num)
+    twitter_timeline(userid,num)
     
