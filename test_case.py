@@ -1,6 +1,6 @@
 import pytest
 import tweepy
-import search
+from search import search
 from TwitterAPI import twitter_search, twitter_timeline
 
 def test_num1(): #test num of search
