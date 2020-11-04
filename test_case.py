@@ -1,9 +1,9 @@
 import pytest
-import unittest
 from search import search
+from TwitterAPI import twitter_search
 
-class MyTestCase(unittest.TestCase):
-    def test_num_successful(self):
+class MyTestCase():
+    def test_num_successful():
 
         #consumer_key = os.getenv('CONSUMER_KEY')
         #consumer_secret = os.getenv('CONSUMER_SECRET')
@@ -21,9 +21,9 @@ class MyTestCase(unittest.TestCase):
         #    txt.append(tweet.text)
         #print(txt)
 
-
-        self.assertEqual(1, len(res))
+        assert len(txt) == 1
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
+
