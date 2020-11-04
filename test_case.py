@@ -1,4 +1,5 @@
 import pytest
+import tweepy
 import search
 from TwitterAPI import twitter_search, twitter_timeline
 
