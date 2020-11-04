@@ -13,10 +13,10 @@ def test_num1():
     assert len(res) == 5
     
 def test_num2():
-    keyword = 'COVID-19'
-    num = 5
-    res = twitter_search(keyword,num)
-    assert len(res) == 1
+    keyword = 'realDonaldTrump'
+    num = 100
+    res = search(keyword,num)
+    assert len(res) == 100
 
 def test_type_successful():
         keyword = 'COVID-19'
