@@ -33,9 +33,15 @@ def test_timeline():
 
 def test_type():
     keyword = 'COVID-19'
-    num = 1
+    num = 10
     res = twitter_search(keyword,num)
     assert type(res) is str
+    
+def test_type():
+    keyword = 'COVID-19'
+    num = 10
+    res = twitter_search(keyword,num)
+    assert 'COVID-19' in res
         
 if __name__ == '__main__':
     pytest.main()
