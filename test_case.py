@@ -2,7 +2,7 @@ import pytest
 import tweepy
 from search import search
 from TwitterAPI import twitter_search, twitter_timeline
-from NLPAPI import NLP_analyze
+#from NLPAPI import NLP_analyze
 
 def test_num1(): #test num of search
     #consumer_key = os.getenv('CONSUMER_KEY')
@@ -44,10 +44,10 @@ def test_type():
     res = twitter_search(keyword,num)
     assert 'COVID-19' in res
     
-def test_NLP():
-    text = 'Hello world!'
-    sentiment = NLP_analyze(text)
-    assert hasattr(sentiment,'score') == True
+#def test_NLP():
+#    text = 'Hello world!'
+#    sentiment = NLP_analyze(text)
+#    assert hasattr(sentiment,'score') == True
         
 if __name__ == '__main__':
     pytest.main()
