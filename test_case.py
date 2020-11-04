@@ -21,13 +21,13 @@ def test_num2(): #test num of search using different keyword and different num
 def test_num3(): #test num of timeline
     userid = 'LeoDiCaprio'
     num = 10
-    res = timeline(userid,num)
+    res = twitter_timeline(userid,num)
     assert len(res) == 10 
     
 def test_timeline():
     userid = 'LeoDiCaprio'
     num = 10
-    res = timeline(userid,num)
+    res = twitter_timeline(userid,num)
     assert type(timeline[0]) is tweepy.models.Status
 
 def test_type():
