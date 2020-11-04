@@ -1,8 +1,8 @@
 import pytest
-from search import search
-from TwitterAPI import twitter_search
+import search
+import TwitterAPI
 
-def test_num1():
+def test_num1(): #test num of search
     #consumer_key = os.getenv('CONSUMER_KEY')
     #consumer_secret = os.getenv('CONSUMER_SECRET')
     #access_key = os.getenv('ACCESS_KEY')
@@ -12,13 +12,25 @@ def test_num1():
     res = search(keyword,num)
     assert len(res) == 5
     
-def test_num2():
+def test_num2(): #test num of search using different keyword and different num
     keyword = 'realDonaldTrump'
     num = 100
     res = search(keyword,num)
     assert len(res) == 100
+  
+def test_num3(): #test num of timeline
+    userid = 'LeoDiCaprio'
+    num = 10
+    res = timeline(userid,num)
+    assert len(res) == 10 
+    
+def test_timeline():
+    userid = 'LeoDiCaprio'
+    num = 10
+    res = timeline(userid,num)
+    assert type(timeline[0]) is tweepy.models.Status
 
-def test_type_successful():
+def test_type():
         keyword = 'COVID-19'
         num = 1
         res = twitter_search(keyword,num)
