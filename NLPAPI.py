@@ -1,6 +1,6 @@
 import os
-#os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key/google_nlp_key.json"
+os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "key/google_nlp_key.json"
 
 # Imports the Google Cloud client library
 from google.cloud import language
