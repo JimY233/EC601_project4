@@ -20,7 +20,7 @@ Althought I have not solve the problem of separating key for Google Cloud Langua
 
 **Use Github Actions**   
 New a workflow and change the .yml file: added the keys for Twitter API as environment variables  
-.yml file is under .github/workflows/python-application.yml  
+.yml file is under .github/workflows/python-app.yml  
 Google Cloud Language API reference: https://github.com/actions-hub/gcloud but not working so far  
 The process can be seen in the Actions. We updated the test_case.py and the code according to the result of Github Actions  
 We can change our code due to the error found there.  
