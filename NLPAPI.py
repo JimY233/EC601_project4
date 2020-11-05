@@ -2,8 +2,11 @@
 from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
+import os
 
 def NLP_analyze(text):
+    os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+    
     # Instantiates a client
     client = language.LanguageServiceClient()
 
