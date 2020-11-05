@@ -1,2 +1,2 @@
 tweepy
-google-cloud-datastore
+google-cloud-language
