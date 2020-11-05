@@ -18,10 +18,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions-hub/gcloud@master
       env:
-        PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID_A}}
+        PROJECT_ID: test_case
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy app.yaml
+        args: info
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
