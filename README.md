@@ -19,7 +19,8 @@ we can combine with Github Actions to find the errors in all the project2 code. 
 Althought I have not solve the problem of separating key for Google Cloud Language API, I still add some unit test for NLPAPI.py with #  
 
 **Use Github Actions**   
-New a workflow and change the .yml file: added the keys for Twitter API as environment variables   
+New a workflow and change the .yml file: added the keys for Twitter API as environment variables  
+.yml file is under .github/workflows/python-application.yml  
 Google Cloud Language API reference: https://github.com/actions-hub/gcloud but not working so far  
 The process can be seen in the Actions. We updated the test_case.py and the code according to the result of Github Actions  
 We can change our code due to the error found there.  
