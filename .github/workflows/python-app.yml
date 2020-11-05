@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions-hub/gcloud@master
       env:
-        PROJECT_ID: test_case
+        PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID_A}}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
         args: info
