@@ -8,10 +8,20 @@ from google.cloud.language import enums
 from google.cloud.language import types
 
 
+import os
+from google.oauth2 import service_account
+import json
+
+#Use github secret passed as environment var
+service_account_info = json.loads(os.environ['GOOGLE_SECRET'])
+credentials = service_account.Credentials.from_service_account_info(service_account_info)                                
+client = language.LanguageServiceClient(credentials=credentials)
+
+
 def NLP_analyze(text):
     
     # Instantiates a client
-    client = language.LanguageServiceClient()
+    #client = language.LanguageServiceClient()
 
     # The text to analyze
     #with open('Tweets.txt', 'r') as review_file:
