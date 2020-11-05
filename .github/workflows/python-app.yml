@@ -43,5 +43,6 @@ jobs:
           CONSUMER_SECRET:  ${{ secrets.CONSUMER_SECRET }} 
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }} 
+          GOOGLE_SECRET:   ${{ secrets.GOOGLE_SECRET }}
       run: |
         pytest
