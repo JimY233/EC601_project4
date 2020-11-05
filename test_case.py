@@ -2,7 +2,7 @@ import pytest
 import tweepy
 from search import search
 from TwitterAPI import twitter_search, twitter_timeline
-#from NLPAPI import NLP_analyze
+from NLPAPI import NLP_analyze
 
 def test_num1(): #test num of search
     #consumer_key = os.getenv('CONSUMER_KEY')
