@@ -25,3 +25,6 @@ Google Cloud Language API reference: https://github.com/actions-hub/gcloud but n
 The process can be seen in the Actions. We updated the test_case.py and the code according to the result of Github Actions  
 We can change our code due to the error found there.  
 Finally it works successfyl with no error now.  
+
+**UPDATED**
+Successfully separate Google Cloud Language API from the script with others' help and thus run unit test for NLPAPI.py in test_case.py (reomove #)
